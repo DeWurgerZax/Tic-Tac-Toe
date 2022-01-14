@@ -29,7 +29,18 @@ field.addEventListener('click', mark);
 
 const check = () => {
   const fChen = field.children;
-  if(fChen[0].style.backgroundImage === fChen[1].style.backgroundImage
+  if(fChen[0].style.backgroundImage !== 'none'
+    && fChen[1].style.backgroundImage !== 'none'
+    && fChen[2].style.backgroundImage !== 'none'
+    && fChen[3].style.backgroundImage !== 'none'
+    && fChen[4].style.backgroundImage !== 'none'
+    && fChen[5].style.backgroundImage !== 'none'
+    && fChen[6].style.backgroundImage !== 'none'
+    && fChen[7].style.backgroundImage !== 'none'
+    && fChen[8].style.backgroundImage !== 'none'){
+      result.style.transform = 'translateY(0)';
+    }
+  else if(fChen[0].style.backgroundImage === fChen[1].style.backgroundImage
     && fChen[0].style.backgroundImage === fChen[2].style.backgroundImage
     && fChen[1].style.backgroundImage === fChen[2].style.backgroundImage
     && fChen[0].style.backgroundImage !== 'none'
